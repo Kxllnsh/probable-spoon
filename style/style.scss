@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+    padding: 2em;
+    font-family: 'Open Sans', sans-serif;
+    background: hsl(257, 40%, 49%);
+    color: white;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.3rem, 5vw, 3rem);
+}
+
+img{
+    width: 100%;
+}
+
+// button{
+//     font-size: 15px;
+// }
+
+//header
+//logo styling
+.logo{
+    width: 10rem;
+    margin-bottom: 2em;
+}
+
+
+//main
+//landing page styling
+.l-section{
+    width: 100%;
+}
+
+.l-img{
+    margin-bottom: 2em;
+}
+
+.l-content{
+    text-align: center;
+
+    h1{
+        margin-bottom: .5em;
+        line-height: 90%;
+    }
+    p{
+        margin-bottom: 1.5em;
+    }
+}
+.l-button{
+    display: grid;
+    place-items: center;
+}
+//global button styling
+.button{
+    width: 70%;
+    height: 4rem;
+    background: white;
+    border-radius: 1.8rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(300, 69%, 71%);
+    transition: .2s;
+
+    &:hover{
+        background: hsl(300, 69%, 71%);
+        color: white;
+    }
+}
+
+//footer
+//socials styling
+.socials{
+    padding: 1em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2.5em;
+
+    i{
+        margin: 0 1em;
+        font-size: 1.2em;
+        border: white 1px solid;
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover{
+            color: hsl(300, 69%, 71%);
+            border: hsl(300, 69%, 71%) 1px solid;
+        }
+    }
+}
+
+//desktop styling
+@media screen and (min-width: 1024px){
+    html{
+        font-size: 16px;
+        padding: 2.5em 5em;
+        overflow: hidden;
+    }
+    //logo
+    .logo{
+        width: 15rem;
+        margin-bottom: 5em;
+    }
+    .l-section{
+        display: flex;
+    }
+    .l-img{
+        width: 50%;
+        margin-bottom: 0;
+        margin-right: 2em;
+    }
+    .l-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+
+        h1{
+            line-height: 100%;
+        }
+    }
+    .l-button{
+        display: inline-block;
+        width: 20rem;
+    }
+    .socials{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-content: right;
+    }
+    //overlay
+    .overlay{
+        display: none;
+    }
+
+    //desktop background
+    .bg-desktop{
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    //desktop background
+    .bg-desktop{
+     display: none;
+    }
+}
+@media screen and (max-width: 375px){
+    html{
+        padding: 1em;
+    }
+}
+//overlay styling
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+//desktop background
+// .bg-desktop{
+//     display: none;
+// }
